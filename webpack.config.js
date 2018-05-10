@@ -14,6 +14,9 @@ module.exports = {
 		filename: 'js/bundle.js',
 		path: path.resolve(__dirname, './')
 	},
+	performance: {
+		hints: false
+	},
 	plugins: [
 		new UglifyJsPlugin({
 			parallel: true,
