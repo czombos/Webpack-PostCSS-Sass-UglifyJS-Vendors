@@ -1,7 +1,7 @@
-Webpack build system with PostCSS, Sass, UglifyJS, Bootstrap
+Webpack build system with PostCSS, Sass, UglifyJS, Bootstrap, Flickity, Lazysizes, Masonry
 ========================================================
 
-> Automating front-end build processes with CSS/SASS/JS import and merge and import assets
+> Automating front-end build processes with CSS/SASS/JS dynamic import vendors
 
 ## Install
 ### Requirements
@@ -21,8 +21,9 @@ git clone https://github.com/czombos/Webpack-PostCSS-Sass-UglifyJS-Bootstrap.git
 ### Install npm dependencies
 
 ```bash
-npm install
+npm i
 ```
 
 ### Run tasks
+#### `npm run dev`
 #### `npm run build`
