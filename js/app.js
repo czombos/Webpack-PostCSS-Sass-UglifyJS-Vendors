@@ -19,7 +19,7 @@ $(function() {
 
 	import(/* webpackChunkName: "bootstrap" */ 'bootstrap').then(({ default: Bootstrap }) => {
 		$('[data-toggle="tooltip"]').tooltip();
-	}).catch(error => 'An error occurred while loading the component');
+	}).catch(error => 'An error occurred while loading the Bootstrap component');
 
 	import(/* webpackChunkName: "jquery-bridget" */ 'jquery-bridget').then(({ default: jQueryBridget }) => {
 		import(/* webpackChunkName: "imagesloaded" */ 'imagesloaded').then(({ default: imagesLoaded }) => {
@@ -33,7 +33,7 @@ $(function() {
 					wrapAround: true,
 					pageDots: false
 				});
-			}).catch(error => 'An error occurred while loading the component');
+			}).catch(error => 'An error occurred while loading the Flickity component');
 			import(/* webpackChunkName: "masonry-layout" */ 'masonry-layout').then(({ default: Masonry }) => {
 				Masonry.setJQuery($);
 				jQueryBridget('masonry', Masonry, $);
@@ -45,7 +45,7 @@ $(function() {
 				$grid.imagesLoaded().progress(function () {
 					$grid.masonry();
 				});
-			}).catch(error => 'An error occurred while loading the component');
-		}).catch(error => 'An error occurred while loading the component');
-	}).catch(error => 'An error occurred while loading the component');
+			}).catch(error => 'An error occurred while loading the Masonry component');
+		}).catch(error => 'An error occurred while loading the imagesLoaded component');
+	}).catch(error => 'An error occurred while loading the jQueryBridget component');
 });
