@@ -1,4 +1,6 @@
 import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;
 
 import(/* webpackChunkName: "fontawesome-free" */ '@fortawesome/fontawesome-free');
 import(/* webpackChunkName: "free-solid-svg-icons" */ '@fortawesome/fontawesome-free/js/solid');

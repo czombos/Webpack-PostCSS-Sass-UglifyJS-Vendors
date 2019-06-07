@@ -34,8 +34,7 @@ const config = {
 	plugins: [
 		new webpack.ProvidePlugin({
 			$: 'jquery',
-			jQuery: 'jquery',
-			'window.jQuery': 'jquery'
+			jQuery: 'jquery'
 		}),
 		new MiniCssExtractPlugin({
 			filename: "css/bundle.css",
