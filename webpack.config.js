@@ -8,8 +8,8 @@ const config = {
 	mode: 'production',
 	context: __dirname + "/",
 	entry: [
-		'./sass/app.sass',
-		'./js/app.js'
+		'./src/assets/sass/app.sass',
+		'./src/assets/js/app.js'
 	],
 	output: {
 		filename: 'js/bundle.js',
@@ -25,8 +25,7 @@ const config = {
 		minimizer: [
 			new UglifyJsPlugin({
 				cache: true,
-				parallel: true,
-				sourceMap: true
+				parallel: true
 			}),
 			new OptimizeCSSAssetsPlugin({})
 		]

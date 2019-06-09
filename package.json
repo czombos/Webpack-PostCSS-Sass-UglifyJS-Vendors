@@ -19,6 +19,8 @@
     "jquery": "^3.4.1",
     "jquery-bridget": "^2.0.1",
     "lazysizes": "^5.1.0",
+    "lg-thumbnail": "^1.1.0",
+    "lightgallery": "^1.6.12",
     "masonry-layout": "^4.2.2",
     "popper.js": "^1.15.0"
   },

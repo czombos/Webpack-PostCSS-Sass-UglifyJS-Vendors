@@ -9,13 +9,22 @@ import(/* webpackChunkName: "free-brands-svg-icons" */ '@fortawesome/fontawesome
 
 import(/* webpackChunkName: "cookieconsent" */ 'cookieconsent');
 
+import(/* webpackChunkName: "lazysizes" */ 'lazysizes').then(result => {
+	window.lazySizesConfig = window.lazySizesConfig || {};
+	lazySizesConfig.expFactor = 4;
+	lazySizesConfig.loadMode = 1;
+	lazySizesConfig.preloadAfterLoad = true;
+});
+
 $(function() {
-	import(/* webpackChunkName: "lazysizes" */ 'lazysizes').then(result => {
-		window.lazySizesConfig = window.lazySizesConfig || {};
-		lazySizesConfig.expFactor = 4;
-		lazySizesConfig.loadMode = 1;
-		lazySizesConfig.preloadAfterLoad = true;
-	});
+	import(/* webpackChunkName: "lightgallery" */ 'lightgallery').then(({ default: lightGallery }) => {
+		import(/* webpackChunkName: "lg-thumbnail" */ 'lg-thumbnail');
+		$(".lightgallery-group").lightGallery({
+			selector: '.lightgallery-item',
+			thumbnail: true,
+			download: false
+		});
+	}).catch(error => 'An error occurred while loading the lightgallery component');
 
 	import(/* webpackChunkName: "bootstrap" */ 'bootstrap').then(({ default: Bootstrap }) => {
 		$('[data-toggle="tooltip"]').tooltip();
